@@ -1,37 +1,99 @@
-body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #211f2b;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  text-align: center;
+  font-size: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 30px 20px;
+  border-radius: 14px;
+  margin-top: 50px;
+}
+
+.divider {
+  width: 100px;
+  height: 3px;
+  background-color: #617bff;
+  margin: 20px auto;
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
+  width: 100%;
 }
 
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
+input {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 7px;
+  border: 2px white solid;
+  padding: 10px 20px;
+  background-color: white;
+  width: 100%;
+  color: #1e1c29;
+  transition: all 0.3s;
 }
 
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
+input:focus {
+  outline: none;
+  border: 2px #617bff solid;
 }
 
-#greeting:empty {
-    display: none;
+input[name="amount"] {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#submit-btn {
+  color: white;
+  background-color: #617bff;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 2px solid #617bff;
+  transition: all 0.3s;
+}
+
+#submit-btn:hover {
+  background-color: #8095ff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#submit-btn:disabled {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }

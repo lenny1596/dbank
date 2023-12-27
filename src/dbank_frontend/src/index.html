@@ -2,23 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>dbank</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="description" content="DBank" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="icon" type="icon" href="favicon.ico" />
+    <title>DBank</title>
   </head>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
+    <div class="container">
+      <img src="dbank_logo.png" alt="DBank_logo" width="100" />
+      <h1>Current Balance: Rs.<span id="value">420</span></h1>
+      <div class="divider"></div>
       <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+        <h2>Amount to Top Up</h2>
+        <input
+          id="topup-amount"
+          type="number"
+          step="0.01"
+          min="0"
+          value=""
+          name="amount"
+        />
+        <h2>Amount to Withdraw</h2>
+        <input
+          id="withdrawal-amount"
+          type="number"
+          step="0.01"
+          min="0"
+          value=""
+          name="amount"
+        />
+        <input type="submit" value="Finalize Transaction" id="submit-btn" />
       </form>
-      <section id="greeting"></section>
-    </main>
+    </div>
   </body>
 </html>
